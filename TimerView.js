@@ -18,7 +18,7 @@ var TimerView = (function() {
 
         setInterval(function() {
                     render(elem, timer.time());
-                }, 1000);
+                }, 100);
     };
 
     function render(elem, time) {
