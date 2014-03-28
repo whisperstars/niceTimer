@@ -11,9 +11,16 @@ function stopDefault(e) {
     (e.preventDefault)? e.preventDefault() : e.returnValue = false;
 }
 
-function inherit(parrent, child) {
-    function tmp(){}
+function inherit(parrent, child /*, construct_callback*/ ) {
+    /*function construct(elem) {
+        AbstractTimer.call(this, elem);
 
+        return this;
+    }*/
+
+    function tmp(){}
     tmp.prototype = parrent.prototype;
     child.prototype = new tmp();
+
+    //return construct;
 }

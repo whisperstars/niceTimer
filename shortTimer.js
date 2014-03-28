@@ -5,9 +5,7 @@ var ShortTimer = (function() {
         return this;
     }
 
-    var tmp = function(){};
-    tmp.prototype = AbstractTimer.prototype;
-    construct.prototype = new tmp();
+    inherit(AbstractTimer, construct);
 
     construct.prototype.time = function() {
         var date = new Date();

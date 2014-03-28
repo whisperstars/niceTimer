@@ -5,11 +5,7 @@ var DateTimer = (function() {
         return this;
     }
 
-    var tmp = function(){};
-    tmp.prototype = AbstractTimer.prototype;
-    construct.prototype = new tmp();
-
-    //inherit(construct, AbstractTimer);
+    inherit(AbstractTimer, construct);
 
     construct.prototype.time = function() {
         var date = new Date();
