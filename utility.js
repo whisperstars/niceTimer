@@ -10,3 +10,10 @@ function stopDefault(e) {
     var e = e || window.event;
     (e.preventDefault)? e.preventDefault() : e.returnValue = false;
 }
+
+function inherit(parrent, child) {
+    function tmp(){}
+
+    tmp.prototype = parrent.prototype;
+    child.prototype = new tmp();
+}
